@@ -1,0 +1,153 @@
+h1 {
+  color: navy;
+  margin-left: 20px;
+}
+em {
+  font-style: normal;
+  font-weight: bold;
+}
+em::before{
+ content: "\A";
+ white-space: pre;
+}
+a::after{
+  content: "\A";
+  white-space: pre;
+ }
+.flexbox-container{
+  display: flex;
+  flex-direction: row;
+  
+}
+.section-header{
+  position: relative;
+  font-weight: bold;
+}
+.section-header::after{
+  content: "\A";
+  white-space: pre;
+ }
+.section-nav{
+  position: relative;
+}
+.section-article{
+  position:relative;
+  min-width: 420px;
+  align-items:stretch;
+  flex-grow: 1;
+  order:2;
+}
+.section-aside{
+  min-width: 255px;
+  position: relative;
+  order: 3;
+}
+.section-footer{
+  font-style: italic;
+  font-size: 12px;
+}
+.picture-2{
+  width: 250px; /* width of container */
+  height: 200px; /* height of container */
+  object-fit: cover;
+  border: 5px solid black;
+}
+.section-info {
+  height: 200px;
+  width: 600px;
+  border-radius: 400px;
+  border: 3px outset rgb(7, 10, 46);
+  min-width: 600px;
+  flex-shrink: 1;
+}
+.contact-info{
+  position: relative;
+  bottom: 20px;
+}
+.product-info{
+  position: relative;
+  left: 28px;
+  bottom: 15px;
+}
+.round-image {
+  width: 200px;
+  border-radius: 100px;
+  float: left;
+  margin-right: 15px;
+}
+.background-nav{
+  background-color: rgba(167, 167, 167, 0.9);
+  border-radius: 4px; 
+}
+.table-frame{
+  text-align: left;
+  width: 400px;
+  border: outset darkblue;
+  border-radius: 10px;
+  border-spacing: 0px;
+  margin-top: 10px;
+  flex-grow: 1;
+  margin-right: 40px;
+}
+.table-info-odd{
+  background-color: rgb(214, 223, 193);
+  
+}
+.table-info-even{
+  background-color:rgb(204, 224, 219);
+}
+@media screen and (max-width: 935px) {
+  .section-info {
+    height: 200px;
+    width: 400px;
+    border-radius: 400px;
+    border: 3px outset rgb(7, 10, 46);
+    min-width: 400px;
+    flex-shrink: 0;
+  }
+  .section-nav{
+    order:1;
+  }
+  .section-article{
+    flex-grow: 1;
+    order:2;
+  }
+  .section-aside{
+    order:3;
+  }
+  .flexbox-container{
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .section-info {
+    height: 200px;
+    width: 400px;
+    border-radius: 400px;
+    border: 3px outset rgb(7, 10, 46);
+    min-width: 400px;
+    flex-shrink: 0;
+  }
+  .section-nav{
+    order:2;
+  }
+  .section-article{
+    order:1;
+  }
+  .section-aside{
+    order:3;
+  }
+  .picture-2{
+    width: 460px; /* width of container */
+    height: 250px; /* height of container */
+    object-fit: cover;
+    border: 5px solid black;
+  }
+  .flexbox-container{
+    display: flex;
+    flex-direction: column;
+  }
+}
